@@ -25,9 +25,11 @@ export default function Header() {
           }
         `}
       >
-        <div className="flex w-1/2 bg-black opacity-80">{/* div vazia */}</div>
+        <div className="hidden md:flex w-1/2 bg-black opacity-80">
+          {/* div vazia */}
+        </div>
 
-        <div className="flex w-1/2 bg-black flex-col">
+        <div className="flex w-full md:w-1/2 bg-black flex-col">
           <div className="w-full p-10">
             <IoMdClose
               size={30}

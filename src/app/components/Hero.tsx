@@ -1,16 +1,16 @@
+import Link from "next/link";
 import React from "react";
 import { FaFacebook, FaGithub, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 const Hero = () => {
   return (
     <div className="flex w-full  flex-row p-10 justify-center items-center">
-      <div className="text-white  flex flex-col gap-10">
+      <div className="text-white hidden md:flex flex-col gap-10">
         <FaFacebook size={30} />
         <FaFacebook size={30} />
         <FaFacebook size={30} />
         <FaFacebook size={30} />
       </div>
-
       <div className=" z-20 w-full container flex flex-row py-10 mx-auto   mt-20">
         <div className="w-full flex  items-center flex-col justify-center">
           <p
@@ -29,13 +29,27 @@ const Hero = () => {
           </p>
         </div>
       </div>
-
-      <div className="text-white  flex flex-col gap-10 justify-center items-center">
+      <div className="text-white hidden md:flex flex-col gap-10 justify-center items-center">
         <p className="rotate-90 mb-5">Siga-me</p>
-        <FaFacebook size={30} />
-        <FaGithub size={30} />
-        <FaInstagram size={30} />
-        <FaWhatsapp size={30} />
+        <Link
+          href="https://www.facebook.com/itamar.batista.de.gouveia"
+          target="_blank"
+        >
+          <FaFacebook size={30} />
+        </Link>
+
+        <Link
+          href="https://www.instagram.com/itamar.b.gouveia/"
+          target="_blank"
+        >
+          <FaInstagram size={30} />
+        </Link>
+        <Link href=" https://github.com/ItamarGouveia" target="_blank">
+          <FaGithub size={30} />
+        </Link>
+        <Link href=" https://wa.me/5533998491982" target="_blank">
+          <FaWhatsapp size={30} />
+        </Link>
       </div>
     </div>
   );
