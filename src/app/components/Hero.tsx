@@ -1,16 +1,27 @@
 import Link from "next/link";
 import React from "react";
-import { FaFacebook, FaGithub, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import {
+  FaDownload,
+  FaFacebook,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 const Hero = () => {
   return (
     <div className="flex w-full  flex-row p-10 justify-center items-center">
-      <div className="text-white hidden md:flex flex-col gap-10">
-        <FaFacebook size={30} />
-        <FaFacebook size={30} />
-        <FaFacebook size={30} />
-        <FaFacebook size={30} />
-      </div>
+      <Link href="/">
+        <div
+          className="text-white hidden md:flex flex-col
+       gap-10 justify-center items-center  
+         h-[300px] rounded-full "
+        >
+          <FaDownload size={30} />
+          <p className="-rotate-90 mt-5">Download CV</p>
+        </div>
+      </Link>
       <div className=" z-20 w-full container flex flex-row py-10 mx-auto   mt-20">
         <div className="w-full flex  items-center flex-col justify-center">
           <p
@@ -32,10 +43,10 @@ const Hero = () => {
       <div className="text-white hidden md:flex flex-col gap-10 justify-center items-center">
         <p className="rotate-90 mb-5">Siga-me</p>
         <Link
-          href="https://www.facebook.com/itamar.batista.de.gouveia"
+          href="https://www.linkedin.com/in/itamar-gouveia/"
           target="_blank"
         >
-          <FaFacebook size={30} />
+          <FaLinkedin size={30} />
         </Link>
 
         <Link

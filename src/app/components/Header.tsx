@@ -4,8 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { BsPersonWorkspace } from "react-icons/bs";
 import { CiMenuFries } from "react-icons/ci";
-import { FaHome, FaPhone } from "react-icons/fa";
+import { FaHome, FaPhone, FaUserGraduate } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
+import { IoDocumentTextOutline } from "react-icons/io5";
 
 export default function Header() {
   const [isVisible, setIsVisible] = useState(false);
@@ -46,8 +47,21 @@ export default function Header() {
             </div>
             <div className="flex items-center py-6">
               <Link href="/" className="text-white text-6xl font-ero  flex ">
+                <IoDocumentTextOutline size={50} className="mr-5" />
+                Sobre
+              </Link>
+            </div>
+
+            <div className="flex items-center py-6">
+              <Link href="/" className="text-white text-6xl font-ero  flex ">
                 <BsPersonWorkspace size={50} className="mr-5" />
                 Portifólio
+              </Link>
+            </div>
+            <div className="flex items-center py-6">
+              <Link href="/" className="text-white text-6xl font-ero  flex ">
+                <FaUserGraduate size={50} className="mr-5" />
+                Educação
               </Link>
             </div>
             <div className="flex items-center py-6">
