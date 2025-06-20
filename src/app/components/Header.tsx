@@ -38,34 +38,49 @@ export default function Header() {
               onClick={() => setIsVisible(false)}
             />
           </div>
-          <div className="flex p-10 flex-col ">
+          <div className="flex p-10 flex-col  -mt-2">
             <div className="flex items-center py-6">
-              <Link href="/" className="text-white text-6xl font-ero  flex ">
+              <Link
+                href="/"
+                className="text-white text-5xl md:text-6xl font-ero  flex "
+              >
                 <FaHome size={50} className="mr-5" />
                 Home
               </Link>
             </div>
             <div className="flex items-center py-6">
-              <Link href="/" className="text-white text-6xl font-ero  flex ">
+              <Link
+                href="/"
+                className="text-white text-5xl md:text-6xl font-ero  flex "
+              >
                 <IoDocumentTextOutline size={50} className="mr-5" />
                 Sobre
               </Link>
             </div>
 
             <div className="flex items-center py-6">
-              <Link href="/" className="text-white text-6xl font-ero  flex ">
+              <Link
+                href="/"
+                className="text-white text-5xl md:text-6xl font-ero  flex "
+              >
                 <BsPersonWorkspace size={50} className="mr-5" />
                 Portifólio
               </Link>
             </div>
             <div className="flex items-center py-6">
-              <Link href="/" className="text-white text-6xl font-ero  flex ">
+              <Link
+                href="/"
+                className="text-white text-5xl md:text-6xl font-ero  flex "
+              >
                 <FaUserGraduate size={50} className="mr-5" />
                 Educação
               </Link>
             </div>
             <div className="flex items-center py-6">
-              <Link href="/" className="text-white text-6xl font-ero  flex ">
+              <Link
+                href="/"
+                className="text-white text-5xl md:text-6xl font-ero  flex "
+              >
                 <FaPhone size={50} className="mr-5" />
                 Contato
               </Link>

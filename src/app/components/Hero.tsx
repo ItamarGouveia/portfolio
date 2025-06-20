@@ -10,37 +10,49 @@ import {
 
 const Hero = () => {
   return (
-    <div className="flex w-full  flex-row p-10 justify-center items-center">
+    <div className="flex w-full  flex-col md:flex-row p-10 justify-center items-center">
       <Link href="/">
         <div
           className="text-white hidden md:flex flex-col
-       gap-10 justify-center items-center  
-         h-[300px] rounded-full "
+       gap-5 justify-center items-center  
+         h-[400px]  "
         >
           <FaDownload size={30} />
-          <p className="-rotate-90 mt-5">Download CV</p>
+          <p
+            className=" mt-5"
+            style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
+          >
+            Download CV
+          </p>
         </div>
       </Link>
+
       <div className=" z-20 w-full container flex flex-row py-10 mx-auto   mt-20">
         <div className="w-full flex  items-center flex-col justify-center">
           <p
-            className=" flex text-[11vw] text-transparent stroke-white stroke-2
-           justify-end leading-56 uppercase font-ero"
+            className=" flex leading-0.9 text-[14vw] sm:text-[12vw] md:text-[11vw] text-transparent
+             stroke-white stroke-2
+           justify-end  uppercase font-ero "
             style={{
               WebkitTextStroke: "2px white",
               color: "transparent",
             }}
           >
-            full stack
+            fullstack
           </p>
 
-          <p className=" flex   text-[11vw] font-ero text-white justify-end leading-56 uppercase">
+          <p className=" flex  leading-0.9 text-[14vw] sm:text-[12vw] md:text-[11vw] font-ero text-white justify-end leading-56 uppercase">
             developer
           </p>
         </div>
       </div>
-      <div className="text-white hidden md:flex flex-col gap-10 justify-center items-center">
-        <p className="rotate-90 mb-5">Siga-me</p>
+      <div className="text-white  flex flex-row md:flex-col gap-10 justify-center items-center">
+        <p
+          className="hidden md:flex mb-5"
+          style={{ writingMode: "vertical-rl", transform: "rotate(360deg)" }}
+        >
+          Siga-me
+        </p>
         <Link
           href="https://www.linkedin.com/in/itamar-gouveia/"
           target="_blank"
