@@ -39,7 +39,10 @@ export default function Header() {
             />
           </div>
           <div className="flex p-10 flex-col  -mt-2">
-            <div className="flex items-center py-6">
+            <div
+              className="flex items-center py-6"
+              onClick={() => setIsVisible(false)}
+            >
               <Link
                 href="/"
                 className="text-white text-5xl md:text-6xl font-ero  flex "
@@ -48,9 +51,12 @@ export default function Header() {
                 Home
               </Link>
             </div>
-            <div className="flex items-center py-6">
+            <div
+              className="flex items-center py-6"
+              onClick={() => setIsVisible(false)}
+            >
               <Link
-                href="/"
+                href="/about"
                 className="text-white text-5xl md:text-6xl font-ero  flex "
               >
                 <IoDocumentTextOutline size={50} className="mr-5" />

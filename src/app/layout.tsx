@@ -3,6 +3,7 @@ import "./globals.css";
 import VantaBackground from "./components/VantaBackground";
 
 import { eros } from "./fonts/fonts";
+import Header from "./components/Header";
 
 export const metadata: Metadata = {
   title: "Itamar Gouveia",
@@ -17,7 +18,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={` ${eros.variable} antialiased relative z-10`}>
-        <VantaBackground>{children}</VantaBackground>
+        <VantaBackground>
+          <Header />
+          {children}
+        </VantaBackground>
       </body>
     </html>
   );
