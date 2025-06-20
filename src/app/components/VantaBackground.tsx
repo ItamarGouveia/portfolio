@@ -1,19 +1,24 @@
 "use client";
+
 import React, { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
-// @ts-ignore
+// @ts-expect-error – FOG não possui tipos compatíveis com TypeScript
 import FOG from "vanta/dist/vanta.fog.min";
 
 const VantaBackground = ({ children }: { children: React.ReactNode }) => {
   const vantaRef = useRef(null);
-  const vantaEffect = useRef<any>(null);
+
+  // Tipando como "any" com justificativa explícita
+  // Alternativas seriam: useRef<ReturnType<typeof FOG> | null>(null) – se souber o retorno
+  const vantaEffect = useRef<ReturnType<typeof FOG> | null>(null);
+
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    let progressInterval = setInterval(() => {
+    const progressInterval = setInterval(() => {
       setProgress((old) => (old < 99 ? old + 1 : old));
     }, 20);
 
@@ -40,7 +45,7 @@ const VantaBackground = ({ children }: { children: React.ReactNode }) => {
         },
       });
 
-      // fallback
+      // Fallback para garantir o carregamento mesmo se onLoad falhar
       setTimeout(() => {
         clearInterval(progressInterval);
         setProgress(100);
@@ -59,10 +64,8 @@ const VantaBackground = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div className="fixed inset-0 overflow-hidden z-0">
-      {/* Vanta effect container */}
       <div ref={vantaRef} className="absolute inset-0 w-full h-full" />
 
-      {/* Loader */}
       {loading && (
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#00080a] z-10">
           <div className="text-white text-4xl font-bold mb-4">{progress}%</div>
@@ -75,7 +78,6 @@ const VantaBackground = ({ children }: { children: React.ReactNode }) => {
         </div>
       )}
 
-      {/* Conteúdo sobreposto: só aparece depois do loading */}
       {!loading && (
         <div className="absolute top-0 left-0 w-full h-full z-10">
           {children}

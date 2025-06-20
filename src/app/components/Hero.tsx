@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  FaArrowDown,
-  FaFacebook,
-  FaGithub,
-  FaInstagram,
-  FaLinkedin,
-  FaWhatsapp,
-} from "react-icons/fa";
+import { FaFacebook, FaGithub, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 const Hero = () => {
   return (
