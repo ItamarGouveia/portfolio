@@ -16,7 +16,7 @@ export default function SkillCircle({ percentage, label }: SkillCircleProps) {
     <div className="flex flex-col items-center text-white m-4">
       <svg height={radius * 2} width={radius * 2}>
         <circle
-          stroke="#444"
+          stroke="#fff"
           fill="transparent"
           strokeWidth={stroke}
           r={normalizedRadius}

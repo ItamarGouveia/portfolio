@@ -2,26 +2,21 @@ import Image from "next/image";
 import React from "react";
 import Socials from "../components/Socials";
 import SkillsSection from "../components/SkillsSection";
+import PhotoCard from "../components/PhotoCard";
 
 export default function About() {
   return (
     <section
-      className="flex w-full  flex-col md:flex-row p-10 justify-center items-center "
+      className="flex w-full  flex-col lg:flex-row p-10 justify-center items-center "
       id="about"
     >
-      <div className="w-full flex flex-col md:flex-row gap-10 ">
-        <div className=" flex justify-center md:justify-end items-center w-full md:w-1/3 ">
-          <Image
-            src="/about.jpg"
-            alt="about"
-            width={445}
-            height={490}
-            className="max-w-xs md:max-w-full"
-          />
+      <div className="w-full flex flex-col lg:flex-row gap-10 ">
+        <div className=" flex justify-center lg:justify-end items-center w-full lg:w-1/3 ">
+          <PhotoCard />
         </div>
 
-        <div className=" w-full md:w-2/3 ">
-          <h1 className="text-5xl text-white font-ero mb-5 md:mb-20">
+        <div className=" w-full lg:w-2/3 ">
+          <h1 className="text-5xl text-white font-ero mb-5 lg:mb-20">
             Sobre mim
           </h1>
           <p className="text-2xl text-white font-ero max-w-4xl mb-10">

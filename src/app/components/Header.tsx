@@ -64,7 +64,10 @@ export default function Header() {
               </Link>
             </div>
 
-            <div className="flex items-center py-6">
+            <div
+              className="flex items-center py-6"
+              onClick={() => setIsVisible(false)}
+            >
               <Link
                 href="/portfolio"
                 className="text-white text-5xl md:text-6xl font-ero  flex "
@@ -73,7 +76,10 @@ export default function Header() {
                 Portifólio
               </Link>
             </div>
-            <div className="flex items-center py-6">
+            <div
+              className="flex items-center py-6"
+              onClick={() => setIsVisible(false)}
+            >
               <Link
                 href="/education"
                 className="text-white text-5xl md:text-6xl font-ero  flex "
@@ -82,7 +88,10 @@ export default function Header() {
                 Educação
               </Link>
             </div>
-            <div className="flex items-center py-6">
+            <div
+              className="flex items-center py-6"
+              onClick={() => setIsVisible(false)}
+            >
               <Link
                 href="/contact"
                 className="text-white text-5xl md:text-6xl font-ero  flex "

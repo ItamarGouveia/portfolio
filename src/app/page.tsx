@@ -13,7 +13,7 @@ export default function Home() {
         <div
           className="text-white hidden md:flex flex-col
      gap-5 justify-center items-center  
-       h-[400px]  "
+       h-[400px] hover:scale-120 transition-transform duration-300 ease-in-out"
         >
           <FaDownload size={30} />
           <p

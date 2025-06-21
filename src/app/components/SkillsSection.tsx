@@ -6,7 +6,7 @@ import SkillCircle from "./SkillCircle";
 const skills = [
   { percentage: 60, label: "Javascript" },
   { percentage: 70, label: "Html" },
-  { percentage: 30, label: "Golang" },
+  { percentage: 40, label: "Golang" },
   { percentage: 90, label: "CSS" },
   { percentage: 80, label: "React JS" },
   { percentage: 70, label: "Node JS" },
