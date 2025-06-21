@@ -7,9 +7,6 @@ import FOG from "vanta/dist/vanta.fog.min";
 
 const VantaBackground = ({ children }: { children: React.ReactNode }) => {
   const vantaRef = useRef(null);
-
-  // Tipando como "any" com justificativa explícita
-  // Alternativas seriam: useRef<ReturnType<typeof FOG> | null>(null) – se souber o retorno
   const vantaEffect = useRef<ReturnType<typeof FOG> | null>(null);
 
   const [loading, setLoading] = useState(true);
@@ -45,7 +42,6 @@ const VantaBackground = ({ children }: { children: React.ReactNode }) => {
         },
       });
 
-      // Fallback para garantir o carregamento mesmo se onLoad falhar
       setTimeout(() => {
         clearInterval(progressInterval);
         setProgress(100);
@@ -63,11 +59,11 @@ const VantaBackground = ({ children }: { children: React.ReactNode }) => {
   }, []);
 
   return (
-    <div className="fixed inset-0 overflow-hidden z-0">
-      <div ref={vantaRef} className="absolute inset-0 w-full h-full" />
+    <div className="relative w-full min-h-screen z-0">
+      <div ref={vantaRef} className="fixed top-0 left-0 w-full h-full -z-10" />
 
       {loading && (
-        <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#00080a] z-10">
+        <div className="fixed inset-0 flex flex-col items-center justify-center bg-[#00080a] z-50">
           <div className="text-white text-4xl font-bold mb-4">{progress}%</div>
           <div className="w-64 h-2 bg-gray-700 rounded">
             <div
@@ -78,11 +74,7 @@ const VantaBackground = ({ children }: { children: React.ReactNode }) => {
         </div>
       )}
 
-      {!loading && (
-        <div className="absolute top-0 left-0 w-full h-full z-10">
-          {children}
-        </div>
-      )}
+      {!loading && <div className="relative z-10">{children}</div>}
     </div>
   );
 };

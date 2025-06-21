@@ -18,7 +18,10 @@ export default function Home() {
           <FaDownload size={30} />
           <p
             className=" mt-5"
-            style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
+            style={{
+              writingMode: "vertical-rl",
+              transform: "rotate(180deg)",
+            }}
           >
             Download CV
           </p>

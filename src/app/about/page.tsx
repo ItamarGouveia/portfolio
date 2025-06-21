@@ -23,7 +23,7 @@ export default function About() {
           <h1 className="text-5xl text-white font-ero mb-5 md:mb-20">
             Sobre mim
           </h1>
-          <p className="text-2xl text-white font-ero max-w-4xl ">
+          <p className="text-2xl text-white font-ero max-w-4xl mb-10">
             Sou um desenvolvedor full stack com paixão por transformar ideias em
             soluções funcionais. Tenho experiência tanto no desenvolvimento de
             interfaces modernas e responsivas quanto na construção de sistemas
