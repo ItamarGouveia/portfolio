@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Socials from "../components/Socials";
+import SkillsSection from "../components/SkillsSection";
 
 export default function About() {
   return (
@@ -9,7 +10,7 @@ export default function About() {
       id="about"
     >
       <div className="w-full flex flex-col md:flex-row gap-10 ">
-        <div className=" flex justify-end items-center w-full md:w-1/3">
+        <div className=" flex justify-center md:justify-end items-center w-full md:w-1/3 ">
           <Image
             src="/about.jpg"
             alt="about"
@@ -19,7 +20,7 @@ export default function About() {
           />
         </div>
 
-        <div className=" w-full md:w-2/3">
+        <div className=" w-full md:w-2/3 ">
           <h1 className="text-5xl text-white font-ero mb-5 md:mb-20">
             Sobre mim
           </h1>
@@ -33,8 +34,10 @@ export default function About() {
             usuário. Gosto de criar aplicações que sejam eficientes, intuitivas
             e que façam a diferença no dia a dia de quem usa.
           </p>
+          <SkillsSection />
         </div>
       </div>
+
       <Socials />
     </section>
   );

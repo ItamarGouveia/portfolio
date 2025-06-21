@@ -66,7 +66,7 @@ export default function Header() {
 
             <div className="flex items-center py-6">
               <Link
-                href="/"
+                href="/portfolio"
                 className="text-white text-5xl md:text-6xl font-ero  flex "
               >
                 <BsPersonWorkspace size={50} className="mr-5" />
@@ -75,7 +75,7 @@ export default function Header() {
             </div>
             <div className="flex items-center py-6">
               <Link
-                href="/"
+                href="/education"
                 className="text-white text-5xl md:text-6xl font-ero  flex "
               >
                 <FaUserGraduate size={50} className="mr-5" />
@@ -84,7 +84,7 @@ export default function Header() {
             </div>
             <div className="flex items-center py-6">
               <Link
-                href="/"
+                href="/contact"
                 className="text-white text-5xl md:text-6xl font-ero  flex "
               >
                 <FaPhone size={50} className="mr-5" />
