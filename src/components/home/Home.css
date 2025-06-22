@@ -1,5 +1,7 @@
 .home {
   background-color: var(--first-gradient);
+}
+.home__wrapper {
   min-height: 100vh;
   display: grid;
   align-items: center;
