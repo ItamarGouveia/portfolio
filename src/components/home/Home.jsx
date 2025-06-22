@@ -3,7 +3,15 @@ import profileImg from "../../assets/profile2-img.png";
 import shapeOne from "../../assets/shape-1.png";
 import shapeTwo from "../../assets/shape-2.png";
 import "./Home.css";
-import { FaBehance, FaDribbble, FaTwitter } from "react-icons/fa";
+import {
+  FaBehance,
+  FaDribbble,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa";
 
 const Home = () => {
   return (
@@ -58,15 +66,21 @@ const Home = () => {
           </p>
           <div className="home__socials">
             <a href="" className="home__social-link">
-              <FaTwitter />
+              <FaLinkedin />
             </a>
 
             <a href="" className="home__social-link">
-              <FaDribbble />
+              <FaGithub />
             </a>
 
             <a href="" className="home__social-link">
               <FaBehance />
+            </a>
+            <a href="" className="home__social-link">
+              <FaYoutube />
+            </a>
+            <a href="" className="home__social-link">
+              <FaInstagram />
             </a>
           </div>
           <div className="home__btns">
