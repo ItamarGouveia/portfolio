@@ -21,6 +21,7 @@ const Skills = () => {
                 </span>
               </div>
               <p className="skills__description"> {description}</p>
+
               <div className="skills__bar">
                 <span
                   className="skills__percentage"

@@ -16,7 +16,11 @@
 .skills__description {
   padding-inline: 30px;
 }
-
+.skills__item {
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+}
 .skills__name {
   font-size: var(--largest-font-size);
 }
@@ -31,14 +35,18 @@
 }
 .skills__description {
   margin-bottom: 30px;
+  min-height: 60px;
 }
 .skills__bar,
 .skills__percentage {
   height: 2px;
 }
-
+.skills__footer {
+  background-color: aqua;
+}
 .skills__bar {
   background: var(--container-color);
+  margin-top: auto;
 }
 .skills__percentage {
   display: block;

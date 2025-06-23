@@ -185,3 +185,38 @@ export const projects = [
       "Configuração de pipeline automatizado com GitHub Actions e Docker.",
   },
 ];
+
+export const cv = [
+  {
+    id: 1,
+    title: "titulo",
+    subtitle: "teste",
+    date: "2014-2015",
+    description: "jflajfl  fajflja  fsafa",
+    category: "education",
+  },
+  {
+    id: 2,
+    title: "titulo",
+    subtitle: "teste",
+    date: "2014-2015",
+    description: "jflajfl  fajflja  fsafa",
+    category: "education",
+  },
+  {
+    id: 1,
+    title: "titulo",
+    subtitle: "teste",
+    date: "2014-2015",
+    description: "jflajfl  fajflja  fsafa",
+    category: "experience",
+  },
+  {
+    id: 2,
+    title: "titulo",
+    subtitle: "teste",
+    date: "2014-2015",
+    description: "jflajfl  fajflja  fsafa",
+    category: "experience",
+  },
+];
